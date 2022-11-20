@@ -1,0 +1,23 @@
+INSERT INTO flashcards(question, answer) VALUES ('What do you call the visual representation of a file?', 'buffer');
+INSERT INTO flashcards(question, answer) VALUES ('VIM is a modal editor (true/false)?', 'true');
+INSERT INTO flashcards(question, answer) VALUES ('What does VIM stand for?','VI improved');
+INSERT INTO flashcards(question, answer) VALUES ('How do you exit VIM?', ':q');
+INSERT INTO flashcards(question, answer) VALUES ('How do you save a file in VIM?', ':w');
+INSERT INTO flashcards(question, answer) VALUES ('What key do you press to enter insert mode?', 'i');
+INSERT INTO flashcards(question, answer) VALUES ('What key do you press to exit insert mode?', 'esc');
+INSERT INTO flashcards(question, answer) VALUES ('What is the name of the file used to change your default settings in VIM?', '.vimrc');
+INSERT INTO flashcards(question, answer) VALUES ('What is an alternative newer version of VIM?', 'neovim');
+INSERT INTO flashcards(question, answer) VALUES ('VIM is an integrated developer enviroment or IDE (true/false)?', 'false');
+INSERT INTO flashcards(question, answer) VALUES ('What command line argument is used to open a fun program that helps you learn how to use the motions in vim?', 'vimtutor');
+INSERT INTO flashcards(question, answer) VALUES ('Alternatively to the arrow keys, how do you move up a line in normal mode?', 'k');
+INSERT INTO flashcards(question, answer) VALUES ('Alternatively to the arrow keys, how do you move down a line in normal mode?', 'j');
+INSERT INTO flashcards(question, answer) VALUES ('Alternatively to the arrow keys, how do you move left one space in normal mode?', 'h');
+INSERT INTO flashcards(question, answer) VALUES ('Alternatively to the arrow keys, how do you move right one space in normal mode?', 'l');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to delete a row of text in normal mode', 'dd');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to delete a word in normal mode', 'dw');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to delete a single character in normal mode', 'x');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to search for a word in normal mode', '/');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to find a letter on a row in normal mode', 'f');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to skip to the beginning of a line', '0');
+INSERT INTO flashcards(question, answer) VALUES ('What is the command to skip to the end of a line', '$');
+
