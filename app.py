@@ -59,14 +59,16 @@ def deck_mode():
 def play_turn(range):
     random_number = randrange(1,range)
     flashcard = Flashcards.get_by_id(random_number)
-    answer = str(input(f"{flashcard.question}"))
+    answer = str(input(f"\n{flashcard.question}\n"))
     if answer == flashcard.answer:
-        print(f"{answer} is correct")
+        print(f"\n{answer} is correct")
         return True
-    elif answer != flashcard.answer:
-        print(f"{answer} is incorrect")
+    elif answer != flashcard.answer and answer != 'exit':
+        print(f"\n{answer} is incorrect")
         print(f"The correct answer is {flashcard.answer}")
         return False 
+    elif answer == 'exit':
+        return 'exit' 
 
 def game_mode():
     flashcards_length = len(Flashcards.select())
@@ -74,15 +76,25 @@ def game_mode():
     turns = 0
 
     print("\nWelcome to Game Mode\n")
-    play_on = str(input("Would you like to play? (y/n)\n"))
-    while play_on == 'y':
-        result = play_turn(flashcards_length)
-        if result:
+    print("When prompted, answer the question, to stop the game enter (exit) as your answer\n")
+    play_on = str(input("Start game? (y/n)\n"))
+    while play_on == 'y' and turns < flashcards_length:
+        correct = play_turn(flashcards_length)
+        if correct == 'exit':
+            break
+            # play_on = 'n' 
+        elif correct:
             score += 1
         turns += 1
-        play_on = str(input("Play again? (y/n)\n"))
+        print(f"You've gotten {score} of {turns} flashcards correct\n")
 
-    print("Thanks for playing!")
+
+    print("\nThanks for playing!\n")
+    play_on = str(input("Would you like to play again? (y/n)\n"))
+    if play_on == 'y':
+        game_mode()
+    elif play_on == 'n':
+        return
 
 def start_app():
     print("\nWelcome To Danny's Vim Flashcards\n")
@@ -103,4 +115,4 @@ def start_app():
         print('invalid input try again')
         start_app()
 
-game_mode()
+start_app()
